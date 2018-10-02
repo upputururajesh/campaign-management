@@ -1,0 +1,213 @@
+/* css for header */
+.navbar {
+	border-radius: 0px;
+}
+.navbar {
+	position: relative;
+	min-height: 50px;
+    border: 1px solid transparent;
+    margin:0px;
+}
+.navbar.navbar-campaign {
+	background-color: #4C385A;
+}
+.navbar-brand {
+	float: left;
+	height: 50px;
+	padding:0px;
+	font-size: 18px;
+	line-height: 20px;
+}
+ul li a {
+	color: #fff;
+}
+.icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #fff !important;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+	text-decoration: none;
+	background-color: transparent;
+}
+#user-img {
+	border-radius: 50%;
+	border: 1px solid #fff;
+	font-size: 20px;
+	padding: 5px;
+}
+.navbar-nav > li > a {
+	padding:5px;
+}
+li a span {
+	padding: 13px 0px;
+}
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px dashed;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	margin-top: 2px !important;
+	padding: 1px !important;
+}
+/* for second navbar */
+#nav-second li a {
+	color: #656565;
+	font-weight: bold;
+}
+.navbar-options {
+background-color: #fff;
+}
+
+#nav-second {
+	font-size: 11px;
+	-moz-font-size: 12px;
+}
+.nav-sec span {
+	padding: 0px 5px 0px 5px !important;
+}
+.icon-bar1 {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #000 !important;
+}
+/* sidenav bar css */
+.row {
+    margin:0px;
+}
+#content-field {
+	background-color: #F1F2F7;
+}
+.sidenav{
+	width: 20%;
+	height: 600px;
+	background-color: #312439;
+	color: #fff;
+	padding: 0px;
+
+}
+
+/* footer css */
+#footer {
+	margin: 0px;
+	background-color: #686868;
+	text-align: center;
+	padding: 10px;
+	color: #ccc;
+}
+.btn.sidebar-btn {
+	background-color: #312439;
+	border-bottom: 1px solid #ccc;
+    width: 100%;
+    color: #DAB66A;
+    padding: 10px;
+}
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: justify;
+	white-space: nowrap;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+ul li {
+	list-style-type: none;
+}
+ul {
+padding: 0px;
+}
+.collapse-li {
+	padding: 10px;
+	border-bottom: 1px solid #463B4D;
+}
+.collapse-li:hover {
+	border-left: 3px solid #CCAA65;
+}
+/*  */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+
+}
+
+#nav-second li a {
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* for tabs content */
+.form-content {
+	background-color: #fff;
+	margin: 15px auto;
+	padding: 15px;
+}
+.form-group {
+	margin-bottom: 15px;
+	width: 33%;
+	display: inline-block;
+	padding: 10px;
+}
+#btn-id{
+	float: right;
+}
+.add-btn, .reset-btn {
+	padding: 10px 25px;
+	border: none;
+	font-weight: bold;
+	margin: 10px;
+}
+.add-btn {
+	background-color: #EABB57;
+}
+#table-data {
+	background-color: #fff;
+	padding: 15px;
+}
+/* for forms css */
+.ng-valid[required], .ng-valid.required  {
+	border-left: 5px solid #42A948; /* green */
+  }
+
+  .ng-invalid:not(form)  {
+	border-left: 5px solid #a94442; /* red */
+  }
+  .nav-sec.active {
+    border-bottom: 3px solid #CCAA65;
+  }
+/* media query */
+@media  only screen and (max-width:460px){
+	.sidenav {
+		width: 20%;
+		height: 800px;
+		background-color: #312439;
+		color: #fff;
+		display: none;
+	}
+	.add-btn, .reset-btn {
+		padding: 5px 15px;
+		border: none;
+		font-weight: bold;
+		margin: 5px;
+		display: inline !important;
+	}
+
+}

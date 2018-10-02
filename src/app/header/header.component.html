@@ -1,0 +1,165 @@
+<div>
+
+<nav class="navbar navbar-campaign">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/images/logo.png" class="img-responsive logo">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" class="user-logo"><span class="glyphicon glyphicon-user" id="user-img"></span> John doe <span class="caret"></span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-options">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+          <span class="icon-bar1"></span>
+          <span class="icon-bar1"></span>
+          <span class="icon-bar1"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar1">
+
+          <ul class="nav navbar-nav" id ="nav-second">
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Configuration')"><span><img src="../../assets/images/setting.png"></span>CONFIGURATIONS</a></li>
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Layalty')"><span><img src="../../assets/images/management.png"></span> LAYALTY MANAGEMENT</a></li>
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Member')"><span><img src="../../assets/images/user.png"></span>MANAGE USERS</a></li>
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Members')"><span><img src="../../assets/images/members.png"></span>MANAGE MEMBERS</a></li>
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Coupon')"><span><img src="../../assets/images/coupon.png"></span>COUPON MANAGEMENT</a></li>
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Campaigning')"><span><img src="../../assets/images/Campaign.png"></span>CAMPAIGN MANAGEMENT</a></li>
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Others')"><span><img src="../../assets/images/others.png"></span>OTHERS</a></li>
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Advisory')"><span><img src="../../assets/images/message.png"></span>ADVISORY</a></li>
+            <li><a class="nav-sec" (click)="tabsOpen($event,'Reports')"><span><img src="../../assets/images/report.png"></span>REPORTS</a></li>
+          </ul>
+      </div>
+</nav>
+</div>
+<div class="row" id="content-field">
+  <div class=" col-md-3 sidenav">
+      <button class="btn sidebar-btn" type="button" data-toggle="collapse" data-target="#demo">TEMPLATE MANAGEMENT
+          <span class="caret"></span></button>
+     <div id="demo" class="collapse">
+       <ul>
+          <li class="collapse-li">View Template</li>
+          <li class="collapse-li">Create Template</li>
+       </ul>
+     </div>
+     <button class="btn sidebar-btn" type="button" data-toggle="collapse" data-target="#demo1">
+       Customer Segment Management
+        <span class="caret"></span></button>
+        <div id="demo1" class="collapse">
+            <ul>
+               <li class="collapse-li ">View  Template</li>
+               <li class="collapse-li">Create Template</li>
+            </ul>
+         </div>
+      <button class="btn sidebar-btn" type="button" data-toggle="collapse" data-target="#demo2">
+        Manage Campaigns
+          <span class="caret"></span></button>
+          <div id="demo2" class="collapse">
+            <ul>
+               <li class="collapse-li">View Template</li>
+               <li class="collapse-li">Create Template</li>
+            </ul>
+          </div>
+
+  </div>
+  <!-- for tabs data html code -->
+  <div class=" col-md-9 content">
+      <div id="Configuration" class="tabcontent">
+          <h3>Configuration</h3>
+      </div>
+      <div id="Layalty" class="tabcontent">
+          <h3>Layalty</h3>
+      </div>
+      <div id="Member" class="tabcontent">
+          <h3>Member</h3>
+      </div>
+      <div id="Members" class="tabcontent">
+          <h3>Members</h3>
+      </div>
+      <div id="Coupon" class="tabcontent">
+          <h3>Coupon Management</h3>
+      </div>
+      <div id="Campaigning" class="tabcontent">
+          <div class="form-content">
+                <h4>Search Templates</h4>
+            <form #templateForm = "ngForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                  <label>Template Id</label>
+                  <input class="form-control" type="text" placeholder="Template Id"
+                   name="templateId"
+                   ngModel
+                   required
+                   templateId
+                   #templateId ="ngModel">
+              </div>
+              <div class="form-group">
+                  <label>Template Type</label>
+                  <input class="form-control" type="text" placeholder="Template Type"
+                  name="templateType"
+                  ngModel
+                  templateType
+                  required
+                  #templateType="ngModel">
+              </div>
+              <div class="form-group">
+                  <label>Template Name</label>
+                  <input class="form-control" type="text" placeholder="Template Name"
+                   name="templateName"
+                   ngModel
+                   templateName
+                   required
+                   #templateName ="ngModel">
+              </div>
+
+              <div class="form-group">
+                  <label>Status</label>
+                  <input class="form-control" type="text" placeholder="Status"
+                   name="status"
+                   ngModel
+                   status
+                   required
+                   #status ="ngModel">
+              </div>
+              <div class="form-group" id="btn-id">
+                  <button  type="submit" class="add-btn" >Add</button>
+                  <button type="reset" class="reset-btn">Reset</button>
+              </div>
+            </form>
+          </div>
+          <div  id="table-data" class="table-responsive">
+            <app-table> </app-table>
+
+         </div>
+      </div>
+      <div id="Others" class="tabcontent">
+          <h3>Others</h3>
+      </div>
+      <div id="Advisory" class="tabcontent">
+          <h3>Advisory</h3>
+      </div>
+      <div id="Reports" class="tabcontent">
+          <h3>Reports</h3>
+      </div>
+
+  </div>
+
+</div>
+<!-- for footer html code -->
+<div class="row">
+    <div class="footer" id="footer">
+        <p>COPYRIGHT &copy; CLUB APPAREL 2014. ALL RIGHTS RESERVED</p>
+      </div>
+</div>
